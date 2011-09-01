@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: tahoma;
+}
+
+#container{
+    width: 600px;
+    margin: 0 auto;
+}
+
+#quotes{
+    width: 100%;
+}
+
+    #quotes thead th{
+        padding: 10px;
+        background-color: #c0c0c0;
+    }
+
+    #quotes tbody td{
+        border-bottom: solid 1px #000;
+        padding: 4px;
+    }
+
+.low{
+    background-color: #ff3333;
+    color: #fff;
+}
+
+.high{
+    background-color: #00cc33;
+    color: #fff;
+}
+
+input{
+    padding: 7px;
+}
+

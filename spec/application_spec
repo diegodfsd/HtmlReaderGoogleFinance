@@ -1,0 +1,24 @@
+require File.join(File.dirname(__FILE__), '..', 'application')
+
+require "test/unit"
+require "rack/test"
+require "json"
+
+class ApplicationSpec < Test::Unit::TestCase
+      include Rack::Test::Methods
+
+  def app
+    Sinatra::Application
+  end
+
+  def test_default
+    get '/'
+    assert_equal 200, last_response.status
+  end
+
+  def test_update
+    get '/update', :q => "ANN"
+    assert_equal 200, last_response.status
+    assert_equal "application/json", last_response.headers["Content-Type"]
+  end
+end

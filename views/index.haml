@@ -1,0 +1,28 @@
+!!! 5
+%html
+  %head
+    %title HTML Reader - Sinatra
+    %link{ :rel => "stylesheet", :href => "css/default.css", :type => "text/css", :media => "screen" }
+  %body
+    %div{ :id => "container" }
+      %form{ :id => "frmquote", :action => "update", :method => "post" }
+        %span
+          %label{ :for => "q" } Quote:
+          %input{ :type => "text", :name => "q", :id => "q", :size => 40, :class => "quote" }
+          %input{ :type => "button", :name => "add", :id => "add", :value => "Add" }
+      %br
+      %table{ :id => "quotes", :cellspacing => 0 }
+        %group
+          %col{ :width => 350 }
+          %col{ :width => 100 }
+          %col{ :width => 150 }
+        %thead
+          %tr
+            %th Quote
+            %th Price
+            %th Variance
+        %tbody
+
+
+  %script{ :type => "text/javascript", :src => "script/jquery-1.6.2.min.js" }
+  %script{ :type => "text/javascript", :src => "script/application.js" }
