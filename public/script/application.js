@@ -24,7 +24,7 @@ var quotes = (function($){
         $tr.find("td:eq(0)").html(quote.name + '[' + quote.nick + ']');
         $tr.find("td:eq(1)").html(quote.prb);
         $tr.find("td:eq(2)").html(quote.price).toggleClass("high", quote.price.match(/\-/) === null).toggleClass("low", !(quote.price.match(/\-/)===null));
-    }
+    };
 
     return {
         add: function(quote){
