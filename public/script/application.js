@@ -29,7 +29,6 @@ var quotes = (function($){
     return {
         add: function(quote){
             update(quote, function(jsonQuote){
-                console.log('add: ' + jsonQuote.name + ', ' + jsonQuote.price + ', ' + jsonQuote.nick);
                 addRow(jsonQuote);
             });
         },
